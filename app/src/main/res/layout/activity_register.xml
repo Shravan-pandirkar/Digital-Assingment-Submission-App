@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <!-- Decorative Circle Top Right -->
+    <View
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-100dp"
+        android:layout_marginEnd="-100dp"
+        android:background="@drawable/circle_decoration_1"/>
+
+    <!-- Decorative Circle Bottom Left -->
+    <View
+        android:layout_width="220dp"
+        android:layout_height="220dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-70dp"
+        android:layout_marginStart="-70dp"
+        android:background="@drawable/circle_decoration_2"/>
+
+    <!-- Decorative Circle Center -->
+    <View
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle_decoration_1"/>
+
+    <!-- Decorative Circle Bottom Right -->
+    <View
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="80dp"
+        android:layout_marginEnd="-40dp"
+        android:background="@drawable/circle_decoration_2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="28dp"
+            android:minHeight="750dp">
+
+            <!-- Logo -->
+            <LinearLayout
+                android:id="@+id/llLogo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:gravity="center"
+                android:background="@drawable/circle_logo_bg"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textSize="40sp"/>
+
+            </LinearLayout>
+
+            <!-- App Title -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:text="Create Account"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:text="Join the assignment portal"
+                android:textSize="16sp"
+                android:textColor="#B3E5FC"
+                android:gravity="center"
+                android:layout_marginBottom="32dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <!-- Glassmorphism Card -->
+            <LinearLayout
+                android:id="@+id/registerCard"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card_blur_bg"
+                android:padding="28dp"
+                android:elevation="20dp">
+
+                <TextView
+                    android:text="Register 🎓"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="#0D47A1"
+                    android:layout_marginBottom="4dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:text="Fill in your details below"
+                    android:textSize="14sp"
+                    android:textColor="#5472A3"
+                    android:layout_marginBottom="28dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Username Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Username"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxStrokeWidth="1.5dp"
+                    app:boxBackgroundColor="#33FFFFFF"
+                    app:hintTextColor="#1565C0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegUsername"
+                        android:inputType="text"
+                        android:textColor="#0D1B2A"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Password Field -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:hint="Password"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxCornerRadiusTopStart="14dp"
+                    app:boxCornerRadiusTopEnd="14dp"
+                    app:boxCornerRadiusBottomStart="14dp"
+                    app:boxCornerRadiusBottomEnd="14dp"
+                    app:boxStrokeColor="#1565C0"
+                    app:boxStrokeWidth="1.5dp"
+                    app:boxBackgroundColor="#33FFFFFF"
+                    app:hintTextColor="#1565C0"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="#1565C0"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRegPassword"
+                        android:inputType="textPassword"
+                        android:textColor="#0D1B2A"
+                        android:textSize="15sp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Role Label -->
+                <TextView
+                    android:text="Select Your Role"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="#1565C0"
+                    android:layout_marginBottom="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <!-- Role Selection Cards -->
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp">
+
+                    <!-- Student Card -->
+                    <LinearLayout
+                        android:id="@+id/llStudentRole"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/role_card_selected"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:text="🎓"
+                            android:textSize="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvStudentLabel"
+                            android:text="Student"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#1565C0"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <!-- Hidden RadioGroup -->
+                        <RadioGroup
+                            android:id="@+id/rgRole"
+                            android:visibility="gone"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioButton
+                                android:id="@+id/rbStudent"
+                                android:checked="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                            <RadioButton
+                                android:id="@+id/rbTeacher"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                    <!-- Teacher Card -->
+                    <LinearLayout
+                        android:id="@+id/llTeacherRole"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="14dp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/role_card_unselected"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <TextView
+                            android:text="👨‍🏫"
+                            android:textSize="30sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                        <TextView
+                            android:id="@+id/tvTeacherLabel"
+                            android:text="Teacher"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#90A4AE"
+                            android:layout_marginTop="6dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Divider -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="20dp">
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#33000000"/>
+
+                    <TextView
+                        android:text="  Register as  "
+                        android:textSize="12sp"
+                        android:textColor="#7B9BC8"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"
+                        android:background="#33000000"/>
+
+                </LinearLayout>
+
+                <!-- Register Button -->
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:text="CREATE ACCOUNT"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:letterSpacing="0.12"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:layout_marginBottom="14dp"
+                    android:backgroundTint="#1565C0"
+                    app:cornerRadius="14dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
+
+                <!-- Back to Login -->
+                <Button
+                    android:id="@+id/btnBackToLogin"
+                    android:text="Already have an account? Login"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="54dp"
+                    android:backgroundTint="#E8F0FE"
+                    android:textColor="#1565C0"
+                    app:cornerRadius="14dp"
+                    style="@style/Widget.MaterialComponents.Button"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
